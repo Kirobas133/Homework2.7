@@ -1,43 +1,19 @@
-﻿// Homework2.7.1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Homework2.7.2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
-#include <Windows.h>
 
-#define MODE 1
+#define SUB(a, b) ((a) - (b))
 
-#if MODE == 1
-    void add() {
-        int a, b;
-        std::cout << "Введите число 1: ";
-        std::cin >> a;
-        std::cout << "Введите число 2: ";
-        std::cin >> b;
 
-        std::cout << "Результат сложения: " << (a + b);
-}
-    int main()
-    {
-        setlocale(LC_ALL, "Russian");
-        SetConsoleOutputCP(1251);
-        SetConsoleCP(1251);
-        std::cout << "Работаю в боевом режиме\n";
-        add();
-
-#elif MODE == 0
-    int main() {
-        setlocale(LC_ALL, "Russian");
-        SetConsoleOutputCP(1251);
-        SetConsoleCP(1251);
-        std::cout << "Работаю в режиме тренировки\n";
-
-#else
-    int main(){
-        setlocale(LC_ALL, "Russian");
-        SetConsoleOutputCP(1251);
-        SetConsoleCP(1251);
-        std::cout << "Неизвестный режим. Завершение работы";
-#endif  
+int main(int argc, char** argv)
+{
+	int a = 6;
+	int b = 5;
+	int c = 2;
+	std::cout << SUB(a, b) << std::endl;
+	std::cout << SUB(a, b) * c << std::endl;
+	std::cout << SUB(a, b + c) * c << std::endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
