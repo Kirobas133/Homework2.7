@@ -5,7 +5,10 @@
 #include <Windows.h>
 
 #define MODE 1
-#ifdef MODE
+
+#ifndef MODE
+#error Constant MODE not found
+#endif
 
 #if MODE == 1
     void add() {
@@ -40,7 +43,6 @@
         std::cout << "Неизвестный режим. Завершение работы";
 #endif  
 }
-#endif
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
